@@ -6,12 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.55.6" />
-  <link rel="canonical" href="https://sinn144.github.io/my_blogsite/">
+  <link rel="canonical" href="https://sinn144.github.io/my_blogsite/001_make_hugosite/">
 
-  
-    
-      <meta name="description" content="An accessibility-friendly Hugo theme, ported from the original Cupper project.">
-    
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://sinn144.github.io/my_blogsite/apple-touch-icon.png">
@@ -36,9 +32,7 @@
 
   
   
-    
-  
-  <title>Cupper</title>
+  <title>001_make_hugosite | Cupper</title>
 </head>
 
   <body>
@@ -161,7 +155,7 @@
       
       
       
-      <a href="https://sinn144.github.io/my_blogsite/" aria-current="page">
+      <a href="https://sinn144.github.io/my_blogsite/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -174,7 +168,7 @@
       
       
       
-      <a href="https://sinn144.github.io/my_blogsite/post/" >
+      <a href="https://sinn144.github.io/my_blogsite/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -216,20 +210,183 @@
         <div>
           
   <main id="main">
-    <h1>Home</h1>
-    <p>Welcome to <strong>Cupper</strong>: An accessibility-friendly Hugo theme, ported from the <a href="https://github.com/ThePacielloGroup/cupper">original Cupper</a> project. Here are some of its features:</p>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      001_make_hugosite
+    </h1>
 
-<div class="ticks">
-  <ul>
-<li>Screen reader and keyboard accessible</li>
-<li>Responsive</li>
-<li>Numerous shortcodes</li>
-<li>Toggleable dark theme</li>
-<li>Toggleable table of contents per blog post</li>
-</ul>
-</div>
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Jul 16, 2019
+      
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#%e5%8b%95%e6%a9%9f">
+            動機
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#hugo%e5%91%a8%e3%82%8a%e3%81%ae%e6%89%b1%e3%81%84%e6%96%b9">
+            HUGO周りの扱い方
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#hugo%e3%81%aemeta%e3%83%87%e3%83%bc%e3%82%bf%e8%a8%98%e8%bf%b0%e3%81%a8md%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e6%a0%bc%e7%b4%8d">
+            hugoのmetaデータ記述とmdのデータ格納
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
+
+    
+
+    
+
+<h1 id="hugoで簡単にmarkdownブログを作るのを見様見真似でしてみる">HUGOで簡単にMarkdownブログを作るのを見様見真似でしてみる</h1>
+
+<h2 id="動機">動機</h2>
+
+<p>友達に自分のサイトを公開しようと思っただけ。</p>
+
+<p>ちなみに、この文章は寝不足の中造っているので、後日修正するかもです。</p>
+
+<h2 id="hugo周りの扱い方">HUGO周りの扱い方</h2>
+
+<h3 id="hugoのインストール">HUGOのインストール</h3>
+
+<p>HUGOを最初にインストールします。Ubuntuは非常に簡単です。</p>
+
+<pre><code>$sudo apt install hugo
+</code></pre>
+
+<h3 id="フォルダ作成">フォルダ作成</h3>
+
+<p>HUGOを立ち上げるためのFolderを作ります。</p>
+
+<pre><code>$hugo new site {$new-site-name-folder}
+$cd {$new-site-name-folder}
+</code></pre>
+
+<p>これで、新規フォルダーが完成していることを確認できる。</p>
+
+<h3 id="一時的にサーバー立てて練習">一時的にサーバー立てて練習</h3>
+
+<p>HUGOでサーバーを立てて練習できる。出来るのは、.configファイルがある場所のみ。</p>
+
+<pre><code>$hugo server
+</code></pre>
+
+<p>ただし、はじめは何も入れていないので、真っ白なページのみが表示される。</p>
+
+<h3 id="サイトに味付けをする">サイトに味付けをする</h3>
+
+<p>hugoは様々なテーマがあるので、それを入れる。</p>
+
+<p>なんでも良いのだが、今回は気に入ったので&rdquo;cupper&rdquo;というテーマを入れてみよう。</p>
+
+<p><a href="https://themes.gohugo.io/cupper-hugo-theme/">hugo_theme_Cupper</a></p>
+
+<p>と思ったら、最低でも0.54が必要らしい。ので、至急入れ直した。</p>
+
+<p><a href="https://github.com/gohugoio/hugo/releases/tag/v0.55.6">hugoの最新バージョンはここ</a>にあったので、適宜あったもの（OS,解凍方法,アーキテクチャなど）を入れる。</p>
+
+<p>あとは、Cupperの指示に従った。</p>
+
+<pre><code>$cd {$hugo_setting.config_folder}
+$git clone https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+</code></pre>
+
+<p>この操作によって、Themeのフォルダにテーマを一つ入れることができた。</p>
+
+<h3 id="テーマ-urlの設定">テーマ・URLの設定</h3>
+
+<p>ここまで編集すると、実際にできているか気になるので、</p>
+
+<pre><code>$hugo server --ThemesDir ../..
+</code></pre>
+
+<p>とすると実際のデモを見ることができた。ただ、いちいちこんなことを書くのは面倒なので、ファイルを編集しなおす。</p>
+
+<pre><code>$nano config.toml
+
+=== content ===
+    # ここは適宜
+    languageCode = &quot;en-us&quot;
+    title = &quot;My New Hugo Site&quot;
+
+    # githubのURLにしてください
+    baseURL = &quot;http://example.org/&quot;
+
+    # 今回の登録テーマのフォルダ名を入れれば大概大丈夫です。
+    theme = &quot;cupper-hugo-theme&quot;
+
+    # なんだこれ！？
+    canonifyurls = true
+
+=== END ===
+</code></pre>
+
+<h3 id="hosting-contentsの生成">hosting contentsの生成</h3>
+
+<pre><code>$hugo
+</code></pre>
+
+<p>と打ち出すと、編集した内容をもとにpublicにデータを生成する。このパブリックをgithubに追跡させる。</p>
+
+<pre><code>$git init
+$git remote add origin git@github.com:***/*******.git
+$git checkout -b gh-pages
+$git add --all
+$git commit -m'***'
+$git push origin gh-pages
+</code></pre>
+
+<p>まあ、このへんはGitの操作してたら当然のことだらけだけど。</p>
+
+<p>そうして、githubのページ設定から、すぐサイトを見に行くことができる。そうすると、上手く反映されていなかった…（これは色々テーマの設定を忘れていたから。）</p>
+
+<p>これでサイトを書き換えたらすぐにhugoと打つことで反映され、またサイトも更新可能になる。</p>
+
+<h2 id="hugoのmetaデータ記述とmdのデータ格納">hugoのmetaデータ記述とmdのデータ格納</h2>
+
+<p>aaa</p>
 
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>

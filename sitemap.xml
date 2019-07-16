@@ -3,8 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sinn144.github.io/my_blogsite/</loc>
+    <loc>https://sinn144.github.io/my_blogsite/001_make_hugosite/</loc>
+    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/post/</loc>
+    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/</loc>
+    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
   </url>
   
   <url>
