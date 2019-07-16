@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sinn144.github.io/my_blogsite/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://sinn144.github.io/my_blogsite/</loc>
     <priority>0</priority>
   </url>
