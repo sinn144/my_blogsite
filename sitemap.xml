@@ -3,8 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sinn144.github.io/my_blogsite/001_make_hugosite/</loc>
+    <loc>https://sinn144.github.io/my_blogsite/images/about/</loc>
+    <lastmod>2019-07-17T10:13:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/images/</loc>
+    <lastmod>2019-07-17T10:13:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/tags/pc/</loc>
     <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -14,13 +26,31 @@
   </url>
   
   <url>
-    <loc>https://sinn144.github.io/my_blogsite/</loc>
-    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
+    <loc>https://sinn144.github.io/my_blogsite/tags/</loc>
+    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sinn144.github.io/my_blogsite/tags/</loc>
+    <loc>https://sinn144.github.io/my_blogsite/tags/hugo/</loc>
+    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/001_make_hugosite/</loc>
+    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/tags/%E3%82%B5%E3%82%A4%E3%83%88%E4%BD%9C%E6%88%90/</loc>
+    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/</loc>
+    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
   </url>
   
 </urlset>

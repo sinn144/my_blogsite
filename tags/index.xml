@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Cupper</title>
+    <title>Tags on Sinn144</title>
     <link>https://sinn144.github.io/my_blogsite/tags/</link>
-    <description>Recent content in Tags on Cupper</description>
+    <description>Recent content in Tags on Sinn144</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Tue, 16 Jul 2019 11:52:33 +0900</lastBuildDate>
     
 	<atom:link href="https://sinn144.github.io/my_blogsite/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PC</title>
+      <link>https://sinn144.github.io/my_blogsite/tags/pc/</link>
+      <pubDate>Tue, 16 Jul 2019 11:52:33 +0900</pubDate>
+      
+      <guid>https://sinn144.github.io/my_blogsite/tags/pc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://sinn144.github.io/my_blogsite/tags/hugo/</link>
+      <pubDate>Tue, 16 Jul 2019 11:52:33 +0900</pubDate>
+      
+      <guid>https://sinn144.github.io/my_blogsite/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>サイト作成</title>
+      <link>https://sinn144.github.io/my_blogsite/tags/%E3%82%B5%E3%82%A4%E3%83%88%E4%BD%9C%E6%88%90/</link>
+      <pubDate>Tue, 16 Jul 2019 11:52:33 +0900</pubDate>
+      
+      <guid>https://sinn144.github.io/my_blogsite/tags/%E3%82%B5%E3%82%A4%E3%83%88%E4%BD%9C%E6%88%90/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
