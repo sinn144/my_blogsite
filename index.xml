@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Cupper</title>
+    <title>Home on Sinn144</title>
     <link>https://sinn144.github.io/my_blogsite/</link>
-    <description>Recent content in Home on Cupper</description>
+    <description>Recent content in Home on Sinn144</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate>
@@ -12,13 +12,29 @@
     
     
     <item>
-      <title>001_make_hugosite</title>
+      <title>About</title>
+      <link>https://sinn144.github.io/my_blogsite/about/</link>
+      <pubDate>Wed, 17 Jul 2019 10:13:39 +0900</pubDate>
+      
+      <guid>https://sinn144.github.io/my_blogsite/about/</guid>
+      <description> 自己紹介 特段面白いことも特にしていない人
+いっつもVtuber追ったり何かしています。
+どうせなんで、ここにおすすめのVtuberを書いておきます。面白いVtuberが好きです。
+<<<<<<< HEAD
+ 鈴原るる     負けるな鈴原。応援したくなるタイプのゲーム配信をするのだが、負けず嫌い。好き。ファミコンのドンキー・ヨッシーアイランドの配信などレトロゲー/死にゲー好きには堪らないぞ。もうこの顔じゃなきゃ駄目だ…    大空スバル     地獄方向まっしぐらの全力アタックに酔い痺れろ。(どうしていつも全力なのか)けどその業火の中にとんでもない秘宝,&#34;kawaii&#34;が隠れているぞ！スバルドダック・スバルモ・スババァ・スバ谷と変幻自在。ASMRの配信を聞いてくれ！舞スバをすこれ Youtube Twitter    ヤマトイオリ     彼女の口からでてくる&#34;タメ&#34;の瀑布に耐えられるだろうか。尊い。配信の終わり方が史上最強に好き。皆も癒やされに行くんだ！houseのメンバーだし…九九が言えないのはどうにかしてくださいな… Youtube Twitter    </description>
+=======
+ 鈴原るる     負けるな鈴原。応援したくなるタイプのゲーム配信をするのだが、負けず嫌い。好き。ファミコンのドンキー・ヨッシーアイランドの配信などレトロゲー/死にゲー好きには堪らないぞ。もうこの顔じゃなきゃ駄目だ… Youtube Twitter    大空スバル     地獄方向まっしぐらの全力アタックに酔い痺れろ。(どうしていつも全力なのか)けどその業火の中にとんでもない秘宝,&#34;kawaii&#34;が隠れているぞ！スバルドダック・スバルモ・スババァ・スバ谷と変幻自在。ASMRの配信を聞いてくれ！舞スバをすこれ Youtube Twitter    ヤマトイオリ     彼女の口からでてくる&#34;タメ&#34;の瀑布に耐えられるだろうか。尊い。配信の終わり方が史上最強に好き。皆も癒やされに行くんだ！houseのメンバーだし…九九が言えないのはどうにかしてくださいな… Youtube Twitter    </description>
+>>>>>>> gh-pages
+    </item>
+    
+    <item>
+      <title>make hugosite</title>
       <link>https://sinn144.github.io/my_blogsite/001_make_hugosite/</link>
       <pubDate>Tue, 16 Jul 2019 11:52:33 +0900</pubDate>
       
       <guid>https://sinn144.github.io/my_blogsite/001_make_hugosite/</guid>
       <description>HUGOで簡単にMarkdownブログを作るのを見様見真似でしてみる 動機 友達に自分のサイトを公開しようと思っただけ。
-ちなみに、この文章は寝不足の中造っているので、後日修正するかもです。
+ちなみに、この文章は寝不足の中造っているので、後日修正するかもです。（大概の文章がおかしい気がするのはご愛嬌）
 HUGO周りの扱い方 HUGOのインストール HUGOを最初にインストールします。Ubuntuは非常に簡単です。
 $sudo apt install hugo  フォルダ作成 HUGOを立ち上げるためのFolderを作ります。
 $hugo new site {$new-site-name-folder} $cd {$new-site-name-folder}  これで、新規フォルダーが完成していることを確認できる。

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Sinn144</title>
-    <link>https://sinn144.github.io/my_blogsite/post/</link>
-    <description>Recent content in Posts on Sinn144</description>
+    <title>hugo on Sinn144</title>
+    <link>https://sinn144.github.io/my_blogsite/tags/hugo/</link>
+    <description>Recent content in hugo on Sinn144</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 16 Jul 2019 11:52:33 +0900</lastBuildDate>
     
-	<atom:link href="https://sinn144.github.io/my_blogsite/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sinn144.github.io/my_blogsite/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
