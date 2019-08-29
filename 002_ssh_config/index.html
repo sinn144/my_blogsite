@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.55.6" />
-  <link rel="canonical" href="https://sinn144.github.io/my_blogsite/post/">
+  <link rel="canonical" href="https://sinn144.github.io/my_blogsite/002_ssh_config/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>Posts | Sinn144</title>
+  <title>ssh config | Sinn144</title>
 </head>
 
   <body>
@@ -210,33 +210,269 @@
         <div>
           
   <main id="main">
-    <h1>Posts</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      ssh config
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Aug 29, 2019
+      
+        
+      
+    </div>
+
     
-      <li>
-        <h2>
-          <a href="https://sinn144.github.io/my_blogsite/002_ssh_config/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            ssh config
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://sinn144.github.io/my_blogsite/tags/ssh/">SSH</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://sinn144.github.io/my_blogsite/tags/server/">server</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://sinn144.github.io/my_blogsite/tags/pc/">PC</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+      
+
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#%e4%bd%bf%e7%94%a8%e7%92%b0%e5%a2%83">
+            使用環境
           </a>
-        </h2>
-      </li>        
-    
-      <li>
-        <h2>
-          <a href="https://sinn144.github.io/my_blogsite/001_make_hugosite/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            make hugosite
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#ssh%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ae%e6%ba%96%e5%82%99">
+            SSHに接続するための準備
           </a>
-        </h2>
-      </li>        
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%e5%81%b4%e3%81%ae%e8%a8%ad%e5%ae%9a">
+            クライアント側の設定
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#%e5%a4%9a%e6%ae%b5%e8%aa%8d%e8%a8%bc%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95">
+            多段認証の設定方法
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
+
     
-    </ul>
+
+    
+
+<h1 id="sshの設定ファイルとか多段認証とかの雑記">SSHの設定ファイルとか多段認証とかの雑記</h1>
+
+<p>こんかいはとにかく外部SSHサーバーとの連携についてまとめておく。</p>
+
+<h2 id="使用環境">使用環境</h2>
+
+<ul>
+<li>サーバー側:Ubuntu 18.04 LTS（だったはず）＋構築済みOPEN-SSHサーバー</li>
+<li>クライアント側:Windows subsystem for linux(WSL)</li>
+</ul>
+
+<h2 id="sshに接続するための準備">SSHに接続するための準備</h2>
+
+<p>サーバー側にユーザーを登録する必要がある。</p>
+
+<p>Sudo権限を持つ人が、踏み台サーバーの方に登録したい人を次のように登録。</p>
+
+<pre><code>### サーバー側設定
+
+$ useradd -m -s /bin/bash ##user_name##
+$ # s: shell 指定 m: home dir 作成
+$ passwd ##user_name##
+$ # passwd はアカウントのパスワードを設定するコマンド
+</code></pre>
+
+<p>因みに、過去に登録したUser名は、</p>
+
+<pre><code>$ less /etc/passwd
+</code></pre>
+
+<p>で確認できた。まあこの辺の読み方は <a href="https://eng-entrance.com/linux-user-show">Linuxでユーザーの一覧や現在のユーザを確認する方法とは？-エンジニアの入り口</a>を見ればいいと思う。</p>
+
+<h2 id="クライアント側の設定">クライアント側の設定</h2>
+
+<p>WSLでするとなると、Ubuntuのコマンドがそのまま使える。</p>
+
+<p>はじめにSSHに接続しやすいように設定しておこう。</p>
+
+<p>configファイルに関してはかなり重要なファイルになるので、パーミッションを替えておきたい。</p>
+
+<p>参考 <a href="https://qiita.com/0084ken/items/2e4e9ae44ec5e01328f1">.ssh/configファイルでSSH接続を管理する (qiita)</a></p>
+
+<pre><code>$ mkdir ~/.ssh
+$ chmod 700 .ssh
+$ touch ~/.ssh/config
+</code></pre>
+
+<p>これを設定し、最後に作ったファイルに以下のことを入力する。</p>
+
+<pre><code>### ~.ssh/config
+
+Host ##ssh_name##
+    HostName ##ip_or_Domain##
+    User ##User_name##
+    Port ##Port_number##
+</code></pre>
+
+<p>こんな形で設定してあげると、</p>
+
+<pre><code>$ ssh ##ssh_name##
+</code></pre>
+
+<p>で簡単に接続ができる。</p>
+
+<p>そして、サーバーに入ってからSSHの接続設定をする必要がある。</p>
+
+<h2 id="多段認証の設定方法">多段認証の設定方法</h2>
+
+<h3 id="sshのidを作ろう">sshのidを作ろう</h3>
+
+<p>sshの認証方式については触れないので他のところを頼って欲しい。とにかく、今回はrsaの方式を用いる。まず、自分のキーを作ります。</p>
+
+<pre><code>### ローカル
+
+$ ssh-keygen -t rsa -C &quot;##identify_this_file##&quot;
+
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/***):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    Your identification has been saved in ***
+    Your public key has been saved in ***
+    The key fingerprint is:
+    SHA256:***
+    The key's randomart image is:
+    +---[RSA 2048]----+
+    （図がでてくる）
+    +----[SHA256]-----+
+</code></pre>
+
+<p>次に、使うサーバーと大元の踏み台サーバーに今作った公開鍵をコピーします。このコピーはメインサーバーと同じLAN内で行いましょう。そうすると色々指示がでてくるので、それに従えば大丈夫です。</p>
+
+<pre><code>### 同じLAN内
+
+$ sudo ssh-copy-id -i ~/.ssh/id_rsa.pub *****
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: &quot;*****&quot;
+The authenticity of host '*****' can't be established.
+RSA key fingerprint is *****
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+*****'s password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   &quot;ssh '*****'&quot;
+and check to make sure that only the key(s) you wanted were added.
+
+$ sudo ssh-copy-id -i ~/.ssh/id_rsa.pub *****
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: &quot;*****&quot;
+The authenticity of host '*****' can't be established.
+ED25519 key fingerprint is SHA256:*****
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   &quot;ssh '*****'&quot;
+and check to make sure that only the key(s) you wanted were added.
+</code></pre>
+
+<p>これでコピーを取った後、ローカルの~/.ssh/configに次の設定を書き込む。</p>
+
+<pre><code>### ~/.ssh/config
+
+# main_server
+Host main_server
+    HostName ##Domain##
+    User ##User_name##
+    Port *****
+    IdentityFiles ##~/.ssh/id_rsa##
+
+# target_server
+Host target_server
+    HostName ##Domain##
+    User ##User_name##
+    ProxyCommand ssh -CW %h:%p main_server
+</code></pre>
+
+<p>このように設定を書いてあげる。そうすると、目的のサーバーへのログインが簡単になる。</p>
+
+<p>ProxyCommandについて:<a href="https://dev.classmethod.jp/beginners/direct-ssh-by-proxycommand/">ProxuCommandを使って踏み台経由で直接ssh/scpする</a>が詳しい。</p>
+
+<pre><code>### 外部LANにて
+
+$ ssh target_server
+</code></pre>
+
+<p>これをすることによって、外部LANのみで踏み台を飛ばしてログインすることができる。(少なくともWSLではできた。)</p>
+
+<p>接続ができなかったときの例の一つにパーミッションの問題があったので、もし突っかかったら一つ.sshフォルダのパーミッションを確認してみるといいのかもしれない。</p>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>

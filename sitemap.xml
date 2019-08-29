@@ -3,26 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sinn144.github.io/my_blogsite/about/</loc>
-    <lastmod>2019-07-17T10:13:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sinn144.github.io/my_blogsite/tags/pc/</loc>
-    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+    <lastmod>2019-08-29T22:10:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sinn144.github.io/my_blogsite/post/</loc>
-    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+    <lastmod>2019-08-29T22:10:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/tags/ssh/</loc>
+    <lastmod>2019-08-29T22:10:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sinn144.github.io/my_blogsite/tags/</loc>
-    <lastmod>2019-07-16T11:52:33+09:00</lastmod>
+    <lastmod>2019-08-29T22:10:22+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/tags/server/</loc>
+    <lastmod>2019-08-29T22:10:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/002_ssh_config/</loc>
+    <lastmod>2019-08-29T22:10:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sinn144.github.io/my_blogsite/about/</loc>
+    <lastmod>2019-07-17T10:13:39+09:00</lastmod>
   </url>
   
   <url>

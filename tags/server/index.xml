@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on Sinn144</title>
+    <link>https://sinn144.github.io/my_blogsite/tags/server/</link>
+    <description>Recent content in server on Sinn144</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 29 Aug 2019 22:10:22 +0900</lastBuildDate>
+    
+	<atom:link href="https://sinn144.github.io/my_blogsite/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ssh config</title>
+      <link>https://sinn144.github.io/my_blogsite/002_ssh_config/</link>
+      <pubDate>Thu, 29 Aug 2019 22:10:22 +0900</pubDate>
+      
+      <guid>https://sinn144.github.io/my_blogsite/002_ssh_config/</guid>
+      <description>SSHの設定ファイルとか多段認証とかの雑記 こんかいはとにかく外部SSHサーバーとの連携についてまとめておく。
+使用環境  サーバー側:Ubuntu 18.04 LTS（だったはず）＋構築済みOPEN-SSHサーバー クライアント側:Windows subsystem for linux(WSL)  SSHに接続するための準備 サーバー側にユーザーを登録する必要がある。
+Sudo権限を持つ人が、踏み台サーバーの方に登録したい人を次のように登録。
+### サーバー側設定 $ useradd -m -s /bin/bash ##user_name## $ # s: shell 指定 m: home dir 作成 $ passwd ##user_name## $ # passwd はアカウントのパスワードを設定するコマンド  因みに、過去に登録したUser名は、
+$ less /etc/passwd  で確認できた。まあこの辺の読み方は Linuxでユーザーの一覧や現在のユーザを確認する方法とは？-エンジニアの入り口を見ればいいと思う。
+クライアント側の設定 WSLでするとなると、Ubuntuのコマンドがそのまま使える。
+はじめにSSHに接続しやすいように設定しておこう。
+configファイルに関してはかなり重要なファイルになるので、パーミッションを替えておきたい。
+参考 .ssh/configファイルでSSH接続を管理する (qiita)
+$ mkdir ~/.ssh $ chmod 700 .ssh $ touch ~/.ssh/config  これを設定し、最後に作ったファイルに以下のことを入力する。
+### ~.ssh/config Host ##ssh_name## HostName ##ip_or_Domain## User ##User_name## Port ##Port_number##  こんな形で設定してあげると、</description>
+    </item>
+    
+  </channel>
+</rss>
